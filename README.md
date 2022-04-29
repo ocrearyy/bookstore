@@ -26,7 +26,9 @@ To get a local copy up and running follow these simple example steps.
 
 2. Cd Bookstore
 
-3. Run npm start to get project running locally 
+3. Run npm install to install all the [packages and dependency]
+
+4. Run npm start to get project running locally 
 
 
 

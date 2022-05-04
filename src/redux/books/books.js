@@ -1,5 +1,5 @@
-const ADD_BOOK = 'BOOK_ADDED';
-const REMOVE_BOOK = 'BOOK_REMOVED';
+const ADD_BOOK = 'books/ADD_BOOK';
+const REMOVE_BOOK = 'books/BOOK_REMOVED';
 
 export const moreBooks = () => ({
   type: ADD_BOOK,

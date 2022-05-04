@@ -1,13 +1,19 @@
+
+
 const ADD_BOOK = 'BOOK_ADDED';
 const REMOVE_BOOK = 'BOOK_REMOVED';
 
-export const moreBooks = () => ({
-  type: ADD_BOOK,
-});
+export const moreBooks = () => {
+  return {
+    type: ADD_BOOK
+  }
+}
 
-export const lessBooks = () => ({
-  type: REMOVE_BOOK,
-});
+export const lessBooks = () => {
+  return {
+    type: REMOVE_BOOK
+  }
+}
 
 export default bookReducer = (state = [], action) => {
   switch (action.type) {
@@ -16,18 +22,19 @@ export default bookReducer = (state = [], action) => {
       {
         id: 1,
         title: 'Title',
-        author: 'Oshane',
-      },
-    ];
+        author: 'Oshane'
+      }
+    ]
 
     case REMOVE_BOOK: return [
       ...state,
       {
         id: '',
         title: '',
-        author: '',
-      },
-    ];
-    default: state;
+        author: ''
+      }
+    ]
+    default: state
   }
-};
+
+}

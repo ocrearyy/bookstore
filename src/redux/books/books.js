@@ -1,3 +1,5 @@
+
+
 const ADD_BOOK = 'BOOK_ADDED';
 const REMOVE_BOOK = 'BOOK_REMOVED';
 
@@ -20,18 +22,19 @@ export default bookReducer = (state = [], action) => {
       {
         id: 1,
         title: 'Title',
-        author: 'Oshane',
-      },
-    ];
+        author: 'Oshane'
+      }
+    ]
 
     case REMOVE_BOOK: return [
       ...state,
       {
         id: '',
         title: '',
-        author: '',
-      },
-    ];
-    default: state;
+        author: ''
+      }
+    ]
+    default: state
   }
-};
+
+}

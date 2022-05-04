@@ -5,4 +5,5 @@ const rootReducer = Redux.combineReducers({
   bookReducer,
   statusReducer,
 });
+
 const store = Redux.createStore(rootReducer);

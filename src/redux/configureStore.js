@@ -1,10 +1,9 @@
-import bookReducer from './books'
-import statusReducer from './categories'
-
+import bookReducer from './books/books';
+import statusReducer from './categories/categories';
 
 const rootReducer = Redux.combineReducers({
   bookReducer,
-  statusReducer
+  statusReducer,
 });
 
 const store = Redux.createStore(rootReducer);

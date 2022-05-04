@@ -28,7 +28,8 @@ const bookReducer = (state = [], action) => {
         author: '',
       },
     ];
-    default: state;
+    default:
+      return state;
   }
 };
 

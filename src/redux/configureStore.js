@@ -1,11 +1,13 @@
-import Redux from 'redux';
+import { combineReducers, createStore } from 'redux';
 import bookReducer from './books/books';
 import statusReducer from './categories/categories';
 
-const rootReducer = Redux.combineReducers({
-  bookReducer,
-  statusReducer,
+const rootReducer = combineReducers({
+  books: bookReducer,
+  categories: statusReducer,
 });
 
 // eslint-disable-next-line no-unused-vars
-const store = Redux.createStore(rootReducer);
+const store = createStore(rootReducer);
+
+export default store;

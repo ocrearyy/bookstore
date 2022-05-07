@@ -9,6 +9,6 @@ const rootReducer = combineReducers({
 });
 
 // eslint-disable-next-line no-unused-vars
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 export default store;

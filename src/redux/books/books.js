@@ -24,7 +24,7 @@ export const moreBooks = (title, author) => (dispatch) => {
     title, author, item_id: uuidv4(), category: 'Not set',
   };
   AddBook(book).then((result) => {
-    if (result.ok) dispatch({ type: ADD_BOOK, payload: [book] });
+    if (result.ok) dispatch({ type: ADD_BOOK, payload: [{ ...book, id: book.item_id }] });
   });
 };
 
@@ -32,7 +32,7 @@ export const lessBooks = (id) => (dispatch) => {
   removeBook(id).then((result) => {
     console.log(result);
     if (result.ok) dispatch({ type: REMOVE_BOOK, payload: id });
-  });
+  }); console.log(id);
 };
 
 const defaultState = [];

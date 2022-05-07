@@ -35,16 +35,7 @@ export const lessBooks = (id) => (dispatch) => {
   });
 };
 
-const defaultState = [{
-  title: 'Dummy Book1',
-  author: 'Oshane 1',
-  id: uuidv4(),
-},
-{
-  title: 'Dummy Book2',
-  author: 'Oshane 2',
-  id: uuidv4(),
-}];
+const defaultState = [];
 
 const bookReducer = (state = defaultState, action) => {
   switch (action.type) {

@@ -1,9 +1,12 @@
 import { v4 as uuidv4 } from 'uuid';
-import { getBooks } from '../../API/Api';
+import { getBooks, AddBook } from '../../API/Api';
 
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/BOOK_REMOVED';
 
+// this is a function that return another function which will
+// be consumed by the Thunk inside middleware performance
+// action creator...
 export const updateInitialBooks = () => (dispatch) => {
   getBooks().then((data) => {
     const result = Object.entries(data).map((data) => {
@@ -16,9 +19,14 @@ export const updateInitialBooks = () => (dispatch) => {
   });
 };
 
-export const moreBooks = (title, author) => ({
-  type: ADD_BOOK, payload: [{ title, author, id: uuidv4() }],
-});
+export const moreBooks = (title, author) => (dispatch) => {
+  const book = {
+    title, author, item_id: uuidv4(), category: 'Not set',
+  };
+  AddBook(book).then((result) => {
+    if (result.ok) dispatch({ type: ADD_BOOK, payload: [book] });
+  });
+};
 
 export const lessBooks = (id) => ({
   type: REMOVE_BOOK, payload: id,

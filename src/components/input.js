@@ -13,7 +13,7 @@ const Input = () => {
     }
   };
   return (
-    <div>
+    <div className="input-book">
       <form onSubmit={handleSubmission}>
         <input id="title" type="text" placeholder="title" />
         <input id="author" type="text" placeholder="author" />

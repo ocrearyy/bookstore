@@ -13,7 +13,7 @@
 }
 
 nav h1 {
-  margin-left: 20px;
+  margin-left: 80px;
   color: #0290ff;
 }
 
@@ -29,8 +29,63 @@ nav h1 {
 .icon {
   font-size: 30px;
   color: #0290ff;
+  margin-right: 80px;
 }
 
 .input-book {
-  margin: 20px;
+  margin-left: 80px;
+  margin-right: 100px;
 }
+
+.input-h1{
+  font-size: 1.25rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: -0.18px;
+  font-weight: bold;
+  margin-bottom: 1.188rem;
+}
+
+input::placeholder {
+  padding-left: 10px;
+}
+
+#author{
+  margin-left: 20px;
+}
+
+#title, #author {
+  border: 1px solid #e8e8e8;
+  padding: 0.813rem 1.063rem;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+}
+
+.submit-btn {
+  font-family: "Roboto Slab", serif;
+  width: 11.5rem;
+  letter-spacing: 0.5px;
+  opacity: 1;
+  border: none;
+  color: #fff;
+  background-color: #0290ff;
+  border-radius: 3px;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+}
+
+.submit-btn {
+  text-transform: uppercase;
+  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  font-weight: bold;
+  font-size: 0.813rem;
+  margin-left: 20px;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5rem;
+}
+
+

@@ -10,11 +10,11 @@ const Book = (props) => {
     dispatch(lessBooks(id));
   };
   return (
-    <div className="book-card">
+    <div className="book-card book-list container">
       <div className="book-preview">
         <p className="category">General</p>
-        <h2>{ book.title }</h2>
-        <p>{ book.author }</p>
+        <h2 className="book-title">{ book.title }</h2>
+        <p className="book-author">{ book.author }</p>
         <button className="btn" type="button">Comments</button>
         <button className="btn" onClick={() => removeHandler(book.id)} type="button">Remove</button>
         <button className="btn" type="button">Edit</button>

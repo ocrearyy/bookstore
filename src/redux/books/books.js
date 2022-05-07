@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
-import { getBooks, AddBook } from '../../API/Api';
+import { getBooks, AddBook, removeBook } from '../../API/Api';
 
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/BOOK_REMOVED';
@@ -28,9 +28,12 @@ export const moreBooks = (title, author) => (dispatch) => {
   });
 };
 
-export const lessBooks = (id) => ({
-  type: REMOVE_BOOK, payload: id,
-});
+export const lessBooks = (id) => (dispatch) => {
+  removeBook(id).then((result) => {
+    console.log(result);
+    if (result.ok) dispatch({ type: REMOVE_BOOK, payload: id });
+  });
+};
 
 const defaultState = [{
   title: 'Dummy Book1',

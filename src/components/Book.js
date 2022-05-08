@@ -10,11 +10,32 @@ const Book = (props) => {
     dispatch(lessBooks(id));
   };
   return (
-    <div>
+    <div className="book-card book-list">
       <div className="book-preview">
-        <h2>{ book.title }</h2>
-        <p>{ book.author }</p>
-        <button onClick={() => removeHandler(book.id)} type="button">remove</button>
+        <p className="category">General</p>
+        <h2 className="book-title">{ book.title }</h2>
+        <p className="book-author">{ book.author }</p>
+        <button className="btn" type="button">Comments</button>
+        <button className="btn" onClick={() => removeHandler(book.id)} type="button">Remove</button>
+        <button className="btn" type="button">Edit</button>
+      </div>
+      <div className="progress-col">
+        <div className="progress" />
+        <div className="progress-detail">
+          <h3 className="percent">25%</h3>
+          <p className="completed">Completed</p>
+        </div>
+      </div>
+
+      <div className="chap-col">
+        <p className="current-chap">Current chapter</p>
+        <p className="chap">
+          Chapter
+          <span>
+            {Math.floor(Math.random() * 16)}
+          </span>
+        </p>
+        <button className="progress-btn" type="button">Update progress</button>
       </div>
     </div>
   );

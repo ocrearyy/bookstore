@@ -10,7 +10,7 @@ const Book = (props) => {
     dispatch(lessBooks(id));
   };
   return (
-    <div className="book-card book-list container">
+    <div className="book-card book-list">
       <div className="book-preview">
         <p className="category">General</p>
         <h2 className="book-title">{ book.title }</h2>

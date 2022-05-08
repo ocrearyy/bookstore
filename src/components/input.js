@@ -18,7 +18,7 @@ const Input = () => {
       <form onSubmit={handleSubmission}>
         <input className="input-field" id="title" type="text" size="60" placeholder="Book Title" />
         <input className="input-field" id="author" type="text" size="40" placeholder="Author" />
-        <button className="submit-btn" type="submit">Add Book</button>
+        <button className="submit-btn1" type="submit">Add Book</button>
       </form>
     </div>
   );

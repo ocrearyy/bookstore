@@ -34,18 +34,28 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **Oshane C**
+👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/oshanedesign) 
+- GitHub: [@oshanedesign](https://github.com/oshanedesign)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/oshane-design-ab2631237)
 - Twitter: [@twitterhandle](https://twitter.com/oshanedesign)
-- YouTube: [@youtube](https://www.youtube.com/channelUCKEzfINidt1ob7xTOwIS_cA)
 
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
 
 ## 📝 License
 
